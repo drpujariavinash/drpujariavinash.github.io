@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url><loc>https://drpujariavinash.com/</loc></url>
-<url><loc>https://drpujariavinash.com/about.html</loc></url>
-<url><loc>https://drpujariavinash.com/contact.html</loc></url>
-<url><loc>https://drpujariavinash.com/specialities.html</loc></url>
-<url><loc>https://drpujariavinash.com/blog.html</loc></url>
+  <url>
+    <loc>https://drpujariavinash.com/</loc>
+    <priority>1.00</priority>
+  </url>
 
-<url><loc>https://drpujariavinash.com/gi-cancers.html</loc></url>
-<url><loc>https://drpujariavinash.com/breast-cancer.html</loc></url>
-<url><loc>https://drpujariavinash.com/gynec-cancers.html</loc></url>
-<url><loc>https://drpujariavinash.com/head-neck-cancers.html</loc></url>
-<url><loc>https://drpujariavinash.com/thoracic-oncology.html</loc></url>
-<url><loc>https://drpujariavinash.com/peritoneal-cancers-hipec.html</loc></url>
-<url><loc>https://drpujariavinash.com/second-opinion.html</loc></url>
+  <url>
+    <loc>https://drpujariavinash.com/crs-hipec.html</loc>
+  </url>
+
+  <url>
+    <loc>https://drpujariavinash.com/gi-cancers.html</loc>
+  </url>
+
+  <url>
+    <loc>https://drpujariavinash.com/breast-cancer.html</loc>
+  </url>
+
+  <url>
+    <loc>https://drpujariavinash.com/head-neck.html</loc>
+  </url>
+
+  <url>
+    <loc>https://drpujariavinash.com/thoracic-oncology.html</loc>
+  </url>
+
+  <url>
+    <loc>https://drpujariavinash.com/gynecologic-cancers.html</loc>
+  </url>
 
 </urlset>
