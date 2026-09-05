@@ -152,6 +152,57 @@ for (const p of pages) {
   }
 }
 const sitemap = await readFile(root + "/sitemap.xml", "utf8");
+// Preserve the approved information architecture across future content edits.
+const textContent = (node) =>
+  node.value || (node.childNodes || []).map(textContent).join("");
+for (const p of pages) {
+  const nodes = docs.get(root + "/" + p.file);
+  const primary = nodes.find((n) => attr(n, "id") === "navigation");
+  assert.deepEqual(
+    walk(primary)
+      .filter((n) => n.tagName === "a")
+      .map(textContent),
+    [
+      "Home",
+      "About",
+      "Cancer Surgery",
+      "Patient Guides",
+      "Research & Academics",
+      "Contact",
+    ],
+  );
+  assert(
+    !nodes.some((n) => attr(n, "href")?.includes("notebook.html")),
+    "No active notebook links",
+  );
+  assert(!textContent(nodes[0]).includes("Membership qualification"));
+}
+assert(!pages.some((p) => p.file === "notebook.html"));
+assert(pages.some((p) => p.file === "research-academics.html"));
+assert(pages.some((p) => p.file === "thyroid-oncology.html"));
+for (const file of ["blog.html", "notebook.html"]) {
+  const nodes = docs.get(root + "/" + file);
+  assert(
+    nodes.some(
+      (n) =>
+        attr(n, "http-equiv") === "refresh" &&
+        attr(n, "content") === "0;url=/patient-resources.html",
+    ),
+  );
+}
+const guides = docs.get(root + "/patient-resources.html");
+for (const file of [
+  "head-neck-cancers.html",
+  "thyroid-oncology.html",
+  "breast-cancer.html",
+  "gi-cancers.html",
+  "gynec-cancers.html",
+  "thoracic-oncology.html",
+  "peritoneal-cancers-hipec.html",
+  "second-opinion.html",
+])
+  assert(guides.some((n) => attr(n, "href") === "/" + file));
+assert(guides.some((n) => attr(n, "id") === "consultation"));
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
 assert.deepEqual(urls.sort(), canonicalUrls.sort());
 assert.equal(new Set(urls).size, urls.length);

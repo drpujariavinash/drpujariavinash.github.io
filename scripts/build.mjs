@@ -4,11 +4,11 @@ const base = "https://drpujariavinash.com";
 const esc = (s) =>
   s.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
 const nav = [
-  ["about.html", "Profile"],
-  ["specialities.html", "Clinical interests"],
-  ["patient-resources.html", "For patients"],
-  ["for-doctors.html", "For doctors"],
-  ["notebook.html", "Notebook"],
+  ["index.html", "Home"],
+  ["about.html", "About"],
+  ["specialities.html", "Cancer Surgery"],
+  ["patient-resources.html", "Patient Guides"],
+  ["research-academics.html", "Research & Academics"],
   ["contact.html", "Contact"],
 ];
 const url = (f) => base + (f === "index.html" ? "/" : "/" + f);
@@ -67,7 +67,7 @@ for (const p of pages) {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Clinical interests",
+                name: "Cancer Surgery",
                 item: base + "/specialities.html",
               },
             ]
@@ -84,8 +84,8 @@ for (const p of pages) {
   let html = `<!DOCTYPE html>
 <html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(p.seo || p.title + " | Dr Avinash Pujari, Goa")}</title><meta name="description" content="${esc(p.description)}"><link rel="canonical" href="${url(p.file)}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(p.seo || p.title + " | Dr Avinash Pujari")}"><meta property="og:description" content="${esc(p.description)}"><meta property="og:url" content="${url(p.file)}"><meta property="og:site_name" content="Dr Avinash Pujari"><meta property="og:locale" content="en_IN"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="${esc(p.title + " | Dr Avinash Pujari")}"><meta name="twitter:description" content="${esc(p.description)}"><meta name="theme-color" content="#203e38"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/menu.js" defer></script><script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replaceAll("<", "\\u003c")}</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="masthead"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="/" aria-label="Dr Avinash Pujari — home"><strong>Dr Avinash Pujari</strong><span>Surgical Oncology · Goa</span></a><button class="menu" type="button" aria-expanded="false" aria-controls="navigation">Menu</button><div class="links" id="navigation" data-open="false">${nav.map(([file, label]) => `<a href="/${file}"${file === p.file ? ' aria-current="page"' : ""}>${label}</a>`).join("")}</div></nav></header>
-<main id="main">${home ? content : `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${p.topic ? '<li><a href="/specialities.html">Clinical interests</a></li>' : ""}<li aria-current="page">${p.title}</li></ol></nav><header class="page-head"><p class="eyebrow">${p.label || "Surgical Oncology · Goa"}</p><h1>${p.title}</h1><p class="lead">${p.description}</p></header><div class="article-layout"><div class="prose">${content}</div><aside class="aside"><p class="eyebrow">Plan your visit</p><h2>A clearer conversation</h2><p>Bring your reports, a treatment summary and the questions that matter to you.</p><a href="/patient-resources.html">Prepare for a consultation →</a><a href="/second-opinion.html">Understanding a second opinion →</a><a href="/contact.html">Contact details →</a></aside></div></div>`}</main>
-<footer class="footer"><div class="wrap"><div class="footer-top"><div><div class="footer-title">Dr Avinash Pujari</div><p>Assistant Professor, Surgical Oncology<br>Goa Medical College</p></div><div><a href="/contact.html">Contact &amp; consultation</a><br><a href="/for-doctors.html">Information for referring doctors</a></div><div><a href="/patient-resources.html">Patient resources</a><br><a href="/notebook.html">The Surgeon’s Notebook</a></div></div><div class="footer-bottom"><span>© 2026 Dr Avinash Pujari</span><span>General information. This website does not replace an individual medical consultation.</span></div></div></footer></body></html>\n`;
+<main id="main">${home ? content : `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>${p.topic ? '<li><a href="/specialities.html">Cancer Surgery</a></li>' : ""}<li aria-current="page">${p.title}</li></ol></nav><header class="page-head"><p class="eyebrow">${p.label || "Surgical Oncology · Goa"}</p><h1>${p.title}</h1><p class="lead">${p.description}</p></header><div class="article-layout"><div class="prose">${content}</div><aside class="aside"><p class="eyebrow">Plan your visit</p><h2>A clearer conversation</h2><p>Bring your reports, a treatment summary and the questions that matter to you.</p><a href="/patient-resources.html">Prepare for a consultation →</a><a href="/second-opinion.html">Understanding a second opinion →</a><a href="/contact.html">Contact details →</a></aside></div></div>`}</main>
+<footer class="footer"><div class="wrap"><div class="footer-top"><div><div class="footer-title">Dr Avinash Pujari</div><p>Assistant Professor, Surgical Oncology<br>Goa Medical College</p></div><div><a href="/contact.html">Contact &amp; consultation</a><br><a href="/for-doctors.html">Information for referring doctors</a></div><div><a href="/patient-resources.html">Patient Guides</a><br><a href="/research-academics.html">Research &amp; Academics</a></div></div><div class="footer-bottom"><span>© 2026 Dr Avinash Pujari</span><span>General information. This website does not replace an individual medical consultation.</span></div></div></footer></body></html>\n`;
   html = html.replace(
     /<script[\s\S]*?<\/script>|&(?![a-zA-Z]+;|#\d+;|#x[0-9a-fA-F]+;)/g,
     (m) => (m === "&" ? "&amp;" : m),
@@ -97,7 +97,8 @@ const redirects = {
   "crs-hipec.html": "peritoneal-cancers-hipec.html",
   "head-neck.html": "head-neck-cancers.html",
   "gynecologic-cancers.html": "gynec-cancers.html",
-  "blog.html": "notebook.html",
+  "blog.html": "patient-resources.html",
+  "notebook.html": "patient-resources.html",
   "testimonials.html": "patient-resources.html",
   "contact/index.html": "contact.html",
 };
@@ -115,7 +116,7 @@ await writeFile("sitemap.xml", sitemap);
 await writeFile("dist/sitemap.xml", sitemap);
 await writeFile(
   "404.html",
-  '<!DOCTYPE html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found | Dr Avinash Pujari</title><link rel="stylesheet" href="/style.css"></head><body><main class="wrap section"><p class="eyebrow">Dr Avinash Pujari</p><h1>Page not found</h1><p>The address may have changed. You can return to the homepage or browse patient resources.</p><div class="actions"><a class="button" href="/">Return home</a><a href="/patient-resources.html">Patient resources</a></div></main></body></html>',
+  '<!DOCTYPE html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Page not found | Dr Avinash Pujari</title><link rel="stylesheet" href="/style.css"></head><body><main class="wrap section"><p class="eyebrow">Dr Avinash Pujari</p><h1>Page not found</h1><p>The address may have changed. You can return to the homepage or browse Patient Guides.</p><div class="actions"><a class="button" href="/">Return home</a><a href="/patient-resources.html">Patient Guides</a></div></main></body></html>',
 );
 await writeFile(
   "contact-old.txt",

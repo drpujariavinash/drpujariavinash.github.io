@@ -12,11 +12,11 @@
 2. Confirm the current Goa consultation location, outpatient schedule and booking/referral route. The old clinic address and hours were not transferred. The site asks visitors to confirm before travelling.
 3. Confirm current procedure availability and referral arrangements, particularly CRS/HIPEC. The site does not claim these are available at Goa Medical College.
 
-MRCS is displayed exactly as supplied, without inferring a Royal College, year or fellowship. No research bibliography is fabricated. Notebook entries are educational notes without invented publication dates or claims of authorship/review.
+MRCS is displayed exactly as supplied, without inferring a Royal College, year or fellowship. No research bibliography is fabricated. Research interests were supplied directly by Dr Pujari. Verified academic records can be added in content/academics.mjs; empty categories are not shown as public placeholders.
 
 ## URL preservation
 
-All original HTML filenames remain. blog.html redirects to notebook.html; testimonials.html redirects to patient-resources.html, replacing the original placeholder testimonials. The three previously nonexistent sitemap paths now redirect to their existing canonical filenames. /contact/ remains usable as a redirect. Redirects use HTML refresh plus a visible link because branch-based GitHub Pages does not provide per-path server redirect rules. Redirects are excluded from the sitemap and use noindex,follow. index.html canonicalises to the domain root.
+All original HTML filenames remain. blog.html and notebook.html redirect to Patient Guides at patient-resources.html; testimonials.html redirects to patient-resources.html, replacing the original placeholder testimonials. The three previously nonexistent sitemap paths now redirect to their existing canonical filenames. /contact/ remains usable as a redirect. Redirects use HTML refresh plus a visible link because branch-based GitHub Pages does not provide per-path server redirect rules. Redirects are excluded from the sitemap and use noindex,follow. index.html canonicalises to the domain root.
 
 The original profile.png remains available for external links; displayed responsive WebP versions are 8,722 and 21,208 bytes versus 1,014,675 bytes originally. CNAME is unchanged. No changes to repository deployment settings are required.
 
@@ -30,9 +30,9 @@ Real-world Core Web Vitals and search indexing require post-deployment field dat
 
 ## Validation performed
 
-- Production build passed: 14 canonical pages, six redirects and a custom 404 page.
-- HTML validator and internal crawler passed across all 21 HTML documents and 341 internal references, including image variants and fragments.
+- Production build passed: 15 canonical pages, seven redirects and a custom 404 page.
+- HTML validator and internal crawler passed across all 23 HTML documents and 381 internal references, including image variants and fragments.
 - Canonicals, JSON-LD syntax and required graph types, sitemap membership, robots.txt, CNAME, image budgets and generated-source parity passed.
-- All 14 canonical pages loaded in a browser at 390px and 1440px widths with no horizontal overflow or broken images and exactly one H1.
+- All 15 canonical pages loaded in a browser at 390px and 1440px widths with no horizontal overflow or broken images and exactly one H1.
 - Desktop and mobile homepage visually inspected; mobile menu opens and Escape closes it with focus returned to the menu button.
 - Static delivery uses system fonts, a small stylesheet, a small deferred menu script and dimensioned responsive images. No third-party runtime is required.

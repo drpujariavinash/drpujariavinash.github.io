@@ -1,8 +1,9 @@
+import { academicSections } from "./academics.mjs";
 export const topics = [
   {
     file: "head-neck-cancers.html",
-    title: "Head, neck & thyroid cancers",
-    short: "Oral cavity, tongue, thyroid and other head and neck cancers.",
+    title: "Head & Neck Oncology",
+    short: "Oral cavity, tongue, salivary gland and laryngeal cancers.",
   },
   {
     file: "gi-cancers.html",
@@ -40,7 +41,11 @@ export const pages = [
     seo: "Dr Avinash Pujari | Surgical Oncologist, Goa Medical College",
     description:
       "Dr Avinash Pujari, Assistant Professor of Surgical Oncology at Goa Medical College. Professional profile, cancer surgery information and consultation resources.",
-    body: `<div class="wrap"><section class="hero"><div><p class="eyebrow">Goa Medical College · Surgical Oncology</p><h1>Dr Avinash<br>Pujari</h1><p class="lead">Surgical Oncologist, Goa<br>Assistant Professor, Goa Medical College</p><p class="intro">A professional resource for patients, families and referring doctors — bringing together clinical interests, surgical training and information to support informed conversations about cancer care.</p><div class="actions"><a class="button" href="/about.html">Professional profile <span aria-hidden="true">↗</span></a><a class="text-link" href="/patient-resources.html">Information for patients →</a></div></div><figure class="portrait"><img src="/assets/profile-800.webp" srcset="/assets/profile-400.webp 400w, /assets/profile-800.webp 800w" sizes="(max-width: 600px) 330px, 40vw" width="800" height="800" alt="Dr Avinash Pujari, Surgical Oncologist" fetchpriority="high"><figcaption><span>Dr Avinash Pujari</span><span>Goa, India</span></figcaption></figure></section><div class="credentials" role="group" aria-label="Qualifications"><div><strong>MCh Surgical Oncology</strong><span>Tata Memorial Hospital, Mumbai</span></div><div><strong>MRCS</strong><span>Membership qualification</span></div><div><strong>MS General Surgery · Gold Medalist</strong><span>Goa Medical College</span></div></div><section class="section"><div class="section-head"><div><p class="eyebrow">Clinical interests</p><h2>Surgical oncology,<br>in context.</h2></div><p>Understanding a diagnosis is the beginning of a treatment conversation. Explore an overview of cancer types, evaluation and the questions to discuss with your treating team.</p></div><div class="specialities">{{TOPICS}}</div></section></div><section class="band section"><div class="wrap"><p class="eyebrow">Information & preparation</p><div class="pathways"><article><h2>For patients</h2><p>What to bring, what to ask and how to prepare for a consultation.</p><a class="text-link" href="/patient-resources.html">Patient resources →</a></article><article><h2>For doctors</h2><p>A practical referral checklist for a focused clinical discussion.</p><a class="text-link" href="/for-doctors.html">Referral information →</a></article><article><h2>The notebook</h2><p>Plain-language notes on diagnosis, treatment decisions and consent.</p><a class="text-link" href="/notebook.html">Read the notebook →</a></article></div></div></section><section class="section wrap"><div class="section-head"><div><p class="eyebrow">Training & academic appointment</p><h2>Grounded in surgical training.</h2></div><div><p>Specialist training at Tata Memorial Hospital, Mumbai; postgraduate surgical training at Goa Medical College; and international advanced surgical training at Shanghai Pulmonary Hospital.</p><a class="text-link" href="/about.html">Qualifications and current appointment →</a></div></div></section>`,
+    body: `<div class="wrap"><section class="hero"><div><p class="eyebrow">Goa Medical College · Surgical Oncology</p><h1>Dr Avinash<br>Pujari</h1><p class="lead">Surgical Oncologist, Goa<br>Assistant Professor, Surgical Oncology<br>Goa Medical College</p><p class="intro">A professional resource for patients, families and referring doctors — bringing together clinical interests, surgical training and information to support informed conversations about cancer care.</p><div class="actions"><a class="button" href="/about.html">Professional profile <span aria-hidden="true">↗</span></a><a class="text-link" href="/patient-resources.html">Patient Guides →</a></div></div><figure class="portrait"><img src="/assets/profile-800.webp" srcset="/assets/profile-400.webp 400w, /assets/profile-800.webp 800w" sizes="(max-width: 600px) 330px, 40vw" width="800" height="800" alt="Dr Avinash Pujari, Surgical Oncologist" fetchpriority="high"><figcaption><span>Dr Avinash Pujari</span><span>Goa, India</span></figcaption></figure></section><div class="credentials" role="group" aria-label="Qualifications"><div><strong>MCh Surgical Oncology</strong><span>Tata Memorial Hospital, Mumbai</span></div><div><strong>MRCS</strong></div><div><strong>MS General Surgery · Gold Medalist</strong><span>Goa Medical College</span></div></div><section class="section"><div class="section-head"><div><p class="eyebrow">Clinical interests</p><h2>Cancer Surgery</h2></div><p>Explore cancer types, evaluation and the questions to discuss with your treating team.</p></div><div class="specialities">{{TOPICS}}</div></section>
+<section class="section"><div class="section-head"><div><p class="eyebrow">Informed decisions</p><h2>Approach to Cancer Surgery</h2></div><div><p>A surgical decision brings together the diagnosis, extent of disease, overall health and the patient’s priorities. Discussion should address the purpose of treatment, alternatives, recovery and the role of the wider cancer care team.</p><a class="text-link" href="/patient-resources.html#consultation">Preparing for a consultation →</a></div></div></section></div>
+<section class="band section"><div class="wrap section-head"><div><p class="eyebrow">Academic interests</p><h2>Research & Academics</h2></div><div><p>Interests span fluorescence-guided oncologic surgery / ICG, head and neck oncology, gastrointestinal and colorectal oncology, surgical education, and cancer outcomes and registry research.</p><a class="text-link" href="/research-academics.html">Explore Research & Academics →</a></div></div></section>
+<section class="section wrap"><div class="section-head"><div><p class="eyebrow">For patients & families</p><h2>Patient Guides</h2></div><div><p>Clear introductions to cancer care, alongside practical guidance for organising records and preparing questions.</p><div class="actions"><a class="button" href="/patient-resources.html">Browse Patient Guides →</a><a class="text-link" href="/second-opinion.html">Preparing for a second opinion →</a></div></div></div><div class="note"><strong>For Referring Doctors</strong><p>A concise checklist to support a focused clinical discussion. <a href="/for-doctors.html">Referral information →</a></p></div></section>
+<section class="section wrap"><div class="section-head"><div><p class="eyebrow">Plan your visit</p><h2>Contact</h2></div><div><p>Confirm consultation arrangements before travelling, and bring the records relevant to your diagnosis.</p><a class="text-link" href="/contact.html">Contact & consultation →</a></div></div></section>`,
   },
   {
     file: "about.html",
@@ -68,18 +73,23 @@ export const pages = [
   },
   {
     file: "specialities.html",
-    title: "Clinical interests",
+    title: "Cancer Surgery",
     description:
       "An introduction to cancer surgery and treatment planning for patients and doctors in Goa.",
     body: '<p>These pages describe general care pathways. The appropriate treatment and its availability must be discussed individually with the treating team.</p><h2>Cancer information</h2><div class="specialities">{{TOPICS}}</div><p><a href="/second-opinion.html">Preparing for a cancer second opinion →</a></p>',
   },
   {
     file: "patient-resources.html",
-    title: "For patients & families",
-    label: "Patient resources",
+    title: "Patient Guides",
+    label: "For patients & families",
     description:
       "Practical information to help you organise your records, prepare your questions and take part in a consultation.",
     body:
+      section(
+        "Guides by cancer type",
+        '<div class="specialities">{{TOPICS}}</div>',
+      ) +
+      '<p><a href="#consultation">Preparing for a consultation</a> · <a href="/second-opinion.html">Preparing for a second opinion</a></p><div id="consultation"></div>' +
       section(
         "Before your appointment",
         "<p>Confirm the consultation location and timing before travelling. If possible, bring a family member or someone you trust to help with notes and questions.</p><ul><li>Biopsy and pathology reports; ask whether slides or blocks are needed.</li><li>Scan reports and the original images on disc or through an accessible link.</li><li>Previous operation notes, discharge summaries and treatment records.</li><li>A list of medicines, allergies and other health conditions.</li><li>A short timeline of symptoms and previous treatment.</li></ul>",
@@ -167,43 +177,24 @@ export const pages = [
           ),
       ),
   },
-  {
-    file: "notebook.html",
-    title: "The Surgeon’s Notebook",
-    label: "Patient education",
-    description:
-      "Short educational notes to make conversations about diagnosis and cancer treatment easier to follow.",
-    body:
-      '<article class="notebook-entry" id="diagnosis"><p class="eyebrow">01 · Understanding reports</p><h2>Diagnosis and stage answer different questions</h2><p>A diagnosis identifies the disease. Stage describes its extent. A pathology report and imaging can therefore contribute different pieces of information to a treatment discussion.</p><p>Ask your team which findings are confirmed and what remains to be clarified.</p>' +
-      source(
-        "https://www.cancer.gov/about-cancer/diagnosis-staging",
-        "Diagnosis and staging",
-      ) +
-      '</article><article class="notebook-entry" id="consent"><p class="eyebrow">02 · Shared decisions</p><h2>Consent is a conversation</h2><p>Before surgery, discuss its purpose, alternatives, risks and expected recovery. Ask how the operation may affect eating, movement, work or other activities that matter to you.</p><p>Write down questions beforehand and ask for unfamiliar terms to be explained.</p>' +
-      source(
-        "https://www.cancer.gov/about-cancer/treatment/types/surgery",
-        "Surgery for cancer",
-      ) +
-      '</article><article class="notebook-entry" id="second-opinion"><p class="eyebrow">03 · Another perspective</p><h2>Making a second opinion useful</h2><p>A focused question and a complete set of records help another clinician assess an existing recommendation. Keep your treating team informed about the review.</p><p><a href="/second-opinion.html">Read the second opinion guide →</a></p></article>',
-  },
 ];
 
 const clinical = [
   {
     description:
-      "An overview of oral, head and neck, and thyroid cancer assessment for patients considering surgical oncology care in Goa.",
+      "An overview of oral and head and neck cancer assessment for patients considering surgical oncology care in Goa.",
     sections: [
       [
         "Different sites need different plans",
-        "<p>Oral cavity, throat, salivary gland and thyroid cancers differ in their biology and treatment. An examination and tissue diagnosis help establish the nature of a lump or lesion; imaging may be needed to assess its extent.</p>",
+        "<p>Oral cavity, tongue, laryngeal and salivary gland cancers differ in their biology and treatment. An examination and tissue diagnosis help establish the nature of a lump or lesion; imaging may be needed to assess its extent.</p>",
       ],
       [
         "Oral and head & neck cancer surgery",
         "<p>The role and extent of surgery depend on the site and stage. Treatment planning may also involve radiotherapy or drug treatment. Discuss the possible effects on speech, swallowing and appearance, and whether reconstruction or rehabilitation may be needed.</p>",
       ],
       [
-        "Thyroid cancer",
-        "<p>The type of thyroid cancer guides the treatment plan. Ask whether surgery is advised, how much of the thyroid may need to be removed and what follow-up will involve.</p>",
+        "Related guide",
+        '<p>For thyroid assessment and treatment information, see the separate <a href="/thyroid-oncology.html">Thyroid Oncology guide</a>.</p>',
       ],
       [
         "Prepare your questions",
@@ -212,10 +203,6 @@ const clinical = [
     ],
     sources: [
       ["https://www.cancer.gov/types/head-and-neck", "Head and neck cancers"],
-      [
-        "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq",
-        "Thyroid cancer treatment",
-      ],
     ],
   },
   {
@@ -364,6 +351,67 @@ const clinical = [
     ],
   },
 ];
+
+topics.push({
+  file: "thyroid-oncology.html",
+  title: "Thyroid Oncology",
+  short:
+    "Evaluation, surgery, lymph-node assessment and follow-up for thyroid cancer.",
+});
+clinical.push({
+  description:
+    "An educational overview of thyroid cancer evaluation, surgical planning and follow-up for patients in Goa.",
+  sections: [
+    [
+      "Evaluation",
+      "<p>Assessment may include examination, thyroid ultrasound, blood tests and fine-needle aspiration. These findings help clarify the diagnosis and guide further evaluation.</p>",
+    ],
+    [
+      "Role and extent of surgery",
+      "<p>The type and extent of thyroid cancer influence whether surgery is appropriate and whether part or all of the thyroid is removed. The benefits, risks and alternatives should be discussed individually.</p>",
+    ],
+    [
+      "Lymph-node assessment",
+      "<p>Neck lymph nodes may be assessed during evaluation. Whether lymph-node surgery is needed depends on the findings and cancer type.</p>",
+    ],
+    [
+      "Multidisciplinary and adjuvant care",
+      "<p>Planning may involve surgical, endocrine and other oncology specialists. Additional treatment, such as radioactive iodine in selected settings, depends on the diagnosis and postoperative findings.</p>",
+    ],
+    [
+      "Follow-up",
+      "<p>Follow-up is tailored to the cancer type and treatment. It may include clinical review, blood tests and imaging, with attention to thyroid hormone needs and possible recurrence.</p>",
+    ],
+  ],
+  sources: [
+    [
+      "https://www.cancer.gov/types/thyroid/patient/thyroid-treatment-pdq",
+      "Thyroid cancer treatment",
+    ],
+  ],
+});
+pages.push({
+  file: "research-academics.html",
+  title: "Research & Academics",
+  label: "Academic interests",
+  description:
+    "Dr Avinash Pujari’s interests in oncologic surgery, surgical education, and cancer outcomes and registry research.",
+  body:
+    section(
+      "Areas of interest",
+      "<ul><li>Fluorescence-guided oncologic surgery / indocyanine green (ICG)</li><li>Head & neck oncology</li><li>Gastrointestinal and colorectal oncology</li><li>Surgical education</li><li>Cancer outcomes and registry research</li></ul>",
+    ) +
+    section(
+      "Academic appointment & training",
+      '<p>Dr Avinash Pujari is Assistant Professor in Surgical Oncology at Goa Medical College. His training includes MCh Surgical Oncology at Tata Memorial Hospital, Mumbai, and international advanced surgical training at Shanghai Pulmonary Hospital.</p><p><a href="/about.html">Professional profile and qualifications →</a></p>',
+    ) +
+    academicSections() +
+    section(
+      "Academic enquiries",
+      '<p>For enquiries relating to these academic interests, please use the <a href="/contact.html">contact information</a>.</p>',
+    ),
+});
+
 topics.forEach((t, i) => {
   const c = clinical[i];
   pages.push({
