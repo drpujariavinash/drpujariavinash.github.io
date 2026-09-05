@@ -1,0 +1,28 @@
+{
+  "name": "dr-avinash-pujari-website",
+  "version": "1.0.0",
+  "description": "Professional academic website for Dr Avinash Pujari",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "npm run build && npm run check",
+    "dev": "node scripts/serve.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drpujariavinash/drpujariavinash.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/drpujariavinash/drpujariavinash.github.io/issues"
+  },
+  "homepage": "https://github.com/drpujariavinash/drpujariavinash.github.io#readme",
+  "devDependencies": {
+    "html-validate": "^11.13.0",
+    "parse5": "^8.0.1",
+    "sharp": "^0.35.4"
+  },
+  "private": true
+}
